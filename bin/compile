@@ -284,5 +284,4 @@ phpize
 make install
 status "Done Installing Oci8"
 cp $build_dir/oci8-2.1.1/modules/oci8.so $build_dir/phpext/ext/oci8.so
-cp $build_dir/oci8-2.1.1/modules/oci8.la $build_dir/phpext/ext/oci8.la
 status "Copying libraries done"
