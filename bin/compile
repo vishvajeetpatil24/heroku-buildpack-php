@@ -275,7 +275,9 @@ install_newrelic_userini
 cd $build_dir
 tar -zxf oci8-2.1.1.tgz
 cd oci8-2.1.1
-phpize
-./configure -with-oci8=shared,instantclient,$build_dir/instant
-make install
-status "Done Installing Oci8"
+cd $build_dir/instant
+ls -l
+#phpize
+#./configure -with-oci8=shared,instantclient,$build_dir/instant
+#make install
+#status "Done Installing Oci8"
