@@ -272,6 +272,8 @@ install_blackfire_ext
 # special treatment for New Relic; we enable it if we detect a license key for it
 install_newrelic_ext
 install_newrelic_userini
+cd $build_dir/instant
+ln -s libclntsh.so.11.1 libclntsh.so
 cd $build_dir
 tar -zxf oci8-2.1.1.tgz
 cd oci8-2.1.1
