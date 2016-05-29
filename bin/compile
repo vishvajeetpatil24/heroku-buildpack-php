@@ -272,3 +272,18 @@ install_blackfire_ext
 # special treatment for New Relic; we enable it if we detect a license key for it
 install_newrelic_ext
 install_newrelic_userini
+cd $build_dir/instant
+ln -s libclntsh.so.11.1 libclntsh.so
+cd $build_dir
+tar -zxf oci8-2.1.1.tgz
+cd oci8-2.1.1
+#cd $build_dir/instant
+#ls -l
+phpize
+./configure -with-oci8=shared,instantclient,$build_dir/instant
+make install
+status "Done Installing Oci8"
+cp $build_dir/oci8-2.1.1/modules/oci8.so $build_dir/phpext/ext/oci8.so
+echo "extension=oci8.so" >> $build_dir/.heroku/php/etc/php/php.ini
+status "Copying libraries done"
+php -m
