@@ -285,5 +285,6 @@ make install
 status "Done Installing Oci8"
 cp $build_dir/oci8-2.1.1/modules/oci8.so $build_dir/phpext/ext/oci8.so
 echo "extension=oci8.so" >> $build_dir/.heroku/php/etc/php/php.ini
+sudo apt-get install libaio1 libaio-dev
 status "Copying libraries done"
 php -m
