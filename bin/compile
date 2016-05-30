@@ -283,7 +283,7 @@ phpize
 ./configure -with-oci8=shared,instantclient,$build_dir/instant
 make install
 status "Done Installing Oci8"
-export LD_LIBRARY_PATH=$build_dir/.apt/lib/x86_64-linux-gnu/
+export LD_LIBRARY_PATH=$build_dir/.apt/lib/x86_64-linux-gnu/:$build_dir/instant/
 export PATH=$PATH:$build_dir/instant/
 cp $build_dir/oci8-2.1.1/modules/oci8.so $build_dir/phpext/ext/oci8.so
 echo "extension=oci8.so" >> $build_dir/.heroku/php/etc/php/php.ini
