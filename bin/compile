@@ -279,7 +279,6 @@ tar -zxf oci8-2.1.1.tgz
 cd oci8-2.1.1
 #cd $build_dir/instant
 #ls -l
-apt-get install libaio1 libaio-dev
 phpize
 ./configure -with-oci8=shared,instantclient,$build_dir/instant
 make install
