@@ -288,9 +288,6 @@ status "Done Installing Oci8"
 cp $build_dir/oci8-2.1.1/modules/oci8.so $build_dir/phpext/ext/oci8.so
 echo "extension=oci8.so" >> $build_dir/.heroku/php/etc/php/php.ini
 status "Copying libraries done"
-status "Installing imagick"
-pecl install imagick
-echo "extension=imagick.so" >> $build_dir/.heroku/php/etc/php/php.ini
 status "All Done"
 #php -m
 #find $build_dir -name libaio.so.1
